@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: limit-mem-default
+  namespace: vinicius
+spec:
+  limits:
+  - default:
+      memory: "1Gi"
+    defaultRequest:
+      memory: "512Mi"
+    type: Container
