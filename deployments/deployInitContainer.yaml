@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-repo-linux-images
+  labels:
+    app: nginx-repo-linux-images
+  namespace: nginx-app
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 3
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: nginx-repo-linux-images
+  template:
+    metadata:
+      labels:
+        app: nginx-repo-linux-images
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        imagePullPolicy: Always
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        resources:
+          limits:
+            cpu: "1000m"
+            memory: "1Gi"
+          requests:
+            cpu: "300m"
+            memory: "512Mi"
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: workdir
+          mountPath: /usr/share/nginx/html
+      initContainers:
+      - name: install
+        image: busybox
+        command: ["/bin/sh", "-c"]
+        args:
+        - > 
+          echo '<html><head><title>Download ISOs Linux</title></head><body><h3>Download Latest Images - Linux </h3><ul><li><a href="CentOS-8.3.2011-x86_64-dvd1.iso" download>Centos 8.3</a></li><li><a href="debian-10.8.0-amd64-DVD-2.iso" download>Debian 10</a></li><li><a href="ubuntu-20.04.2-live-server-amd64.iso" download>Ubuntu Server 20.04.2</a></li></ul></body></html>' > /work-dir/index.html &&
+          wget -c -P /work-dir http://centos.brisanet.com.br/8.3.2011/isos/x86_64/CentOS-8.3.2011-x86_64-dvd1.iso &&
+          wget -c -P /work-dir https://saimei.ftp.acc.umu.se/debian-cd/current/amd64/iso-dvd/debian-10.8.0-amd64-DVD-2.iso &&
+          wget -c -P /work-dir https://ubuntu.itsbrasil.net/ubuntu-releases/20.04.2/ubuntu-20.04.2-live-server-amd64.iso 
+        volumeMounts:
+        - name: workdir
+          mountPath: "/work-dir"
+      volumes:
+      - name: workdir
+        emptyDir: {}
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 60
+
+
+ 
