@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orlando-city
+  labels:
+    app: orlando-city
+  namespace: orlando-city
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 3
+  revisionHistoryLimit: 3
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: orlando-city
+  template:
+    metadata:
+      labels:
+        app: orlando-city
+    spec:
+      containers:
+      - name: orlando-city
+        image: viniciusalcantara2018/orlando-city:1.0
+        imagePullPolicy: Always
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        resources:
+          limits:
+            cpu: "150m"
+            memory: "256Mi"
+          requests:
+            cpu: "100m"
+            memory: "150Mi"
+        ports:
+        - containerPort: 80
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 60
+      nodeSelector:
+        environment: ENV-PRODUCAO
+
+ 

@@ -1,0 +1,330 @@
+@charset "UTF-8";
+/* Cabeçalho */
+header {
+    width: 100%;
+    height: 170px;
+    background-color: #5e299a;
+}
+header .container {
+    position: relative;
+}
+header .header-black {
+    height: 55px;
+    background-color: #000;
+}
+#caixa-logo {
+    position: absolute;
+    z-index: 1;
+}
+header #logomarca {
+    position: relative;
+    top: -70px;
+}
+.brasoes {
+    height: 25px;
+    width: 25px;
+}
+/* Menu Principal */
+#menu {
+    margin-top: 28px;
+}
+#menu li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 50px;
+}
+#menu li a {
+    color: white;
+    text-decoration: none;
+}
+#menu li a:hover {
+    color: #f8e196;
+}
+#menu li.search {
+    width: 182px;
+}
+#menu li.search input {
+    background-color: #5c2d90;
+    color: #fff;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+}
+#menu li.search ::-webkit-input-placeholder {
+    color: #fff;
+}
+#menu span button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 3px;
+    top: 0px;
+}
+#menu span button i {
+    font-size: 20px;
+    color: rgba(255,255,255, 0.5);
+}
+/* Carousel - Principal*/
+#carousel-img-orlando {
+    position: relative;   
+}
+.banners-text-img {
+    height: 130px;
+    background-color: rgba(94,41,154,0.8);
+    color: #f8e196;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/*Noticias*/
+#news {
+    color: #5e299a;
+    background-color: #fff;
+}
+#news time {
+    color: #a7a7a7;
+    font-weight: bold;
+}
+#news hr {
+    border: #f8e196 solid 1px;
+}
+#noticias a p {
+    font-size: 13px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #5e299a;
+}
+#noticias a p:hover {
+    text-decoration: underline;
+}
+#noticias .row {
+    margin-bottom: 20px;
+}
+#noticia01 {
+    height: 150px;
+    width: 180px;
+    padding: 0px;
+    background: url(../img/noticias/noticia01.png) no-repeat 10% 10%;
+}
+#noticia02 {
+    height: 150px;
+    width: 180px;
+    padding: 0px;
+    background: url(../img/noticias/noticia02.png) no-repeat 10% 10%;
+}
+#noticia03 {
+    height: 150px;
+    width: 180px;
+    padding: 0px;
+    background: url(../img/noticias/noticia03.png) no-repeat 10% 10%;
+}
+#noticia04 {
+    height: 150px;
+    width: 180px;
+    padding: 0px;
+    background: url(../img/noticias/noticia04.png) no-repeat 10% 10%;
+}
+#noticia05 {
+    height: 150px;
+    width: 180px;
+    padding: 0px;
+    background: url(../img/noticias/noticia05.png) no-repeat 10% 10%;
+}
+#noticia06 {
+    height: 150px;
+    width: 180px;
+    padding: 0px;
+    background: url(../img/noticias/noticia06.png) no-repeat 10% 10%;
+}
+.notice-img {
+    margin-left: 15px;
+}
+/* Vídeos */
+#videos h4 {
+    font-weight: bold;
+}
+/* Publicidade */
+#cartao {
+    margin-top: 30px;
+}
+#anuncio1 {
+    background-color: #5e299a;
+    color: #f8e196;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: justify;
+    height: 158px;
+}
+/* Scores - Estatísticas*/
+#scores .jumbotron {
+    background-color: #5e299a;
+    margin-bottom: 0px;
+}
+#scores .jumbotron h1 {
+    color: #f8e196; 
+}
+#scores .jumbotron h3 {
+    color: #fff;
+}
+#call-to-action .jumbotron {
+    height: 400px;
+    background-color: rgba(94,41,154,0.8);
+    color: #fff;
+    margin-bottom: 0;
+}
+#call-to-action .jumbotron h2 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+#call-to-action .jumbotron hr {
+    margin-top: 10px;
+    border: #fff solid 1px;
+    width: 500px;
+}
+.botoes {
+    margin: 70px auto 0 auto;
+    max-width: 350px;
+}
+.botoes .botao-roxo {
+    height: 40px;
+    width: 150px;
+    background-color: #5e299a;
+    border: none;
+    border-radius: 0;
+    color: #f8e196;
+    font-weight: bold;
+    padding: 10px;
+    
+}
+.botoes .botao-amarelo {
+    height: 40px;
+    width: 150px;
+    background-color: #f8e196;
+    border: none;
+    border-radius: 0;
+    color: #5e299a;
+    font-weight: bold;
+    padding: 10px;
+}
+/* Overline From Center */
+.progress-line-button {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.progress-line-button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  top: 0;
+  background: #ff253a;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.progress-line-button:hover:before, .progress-line-button:focus:before, .progress-line-button:active:before {
+  left: 0;
+  right: 0;
+}
+/* Rodapé */
+footer {
+    margin-bottom: 0px;
+}
+footer .rodape-1 {
+    height: 230px;
+    background-color: #171f26;
+}
+footer .rodape-2 {
+    height: 60px;
+    background-color: #11171d;
+    border-top: 1px solid #242d37;
+}
+.texto-rodape {
+    box-sizing: border-box;
+    padding-top: 22px;
+}
+.copy {
+    color: #666;
+}
+.developed {
+    color: #623291;
+}
+.logo {
+    margin-top: 32px;
+}
+.col-popular-posts {
+    padding-top: 30px;
+    color: #fff;
+}
+.col-popular-posts hr {
+    border: 1px solid #5e299a;;
+    margin-top: 0;
+}
+.col-popular-posts ul {
+    padding-left: 0px;
+}
+.col-popular-posts ul li {
+    text-decoration: none;
+    list-style: none;
+    margin-top: 5px;
+}
+.col-popular-posts ul time {
+    color: #666;
+}
+.col-popular-posts ul li a {
+    text-decoration: none;
+    color: #f8e196;
+}
+.col-links {
+    padding-top: 30px;
+    color: #fff;
+}
+.col-links hr {
+    border: 1px solid #5e299a;
+    margin-top: 0;
+}
+.col-links li a {
+    text-decoration: none;
+    color: #f8e196;
+}
+.col-get-in-touch {
+    padding-top: 30px;
+    color: #fff;
+}
+.col-get-in-touch address {
+    color: #f8e196;
+    margin-bottom: 0px;
+}
+.col-get-in-touch address i {
+    color: #f8e196;
+}
+.col-get-in-touch address p a {
+    text-decoration: none;
+    color: #f8e196;
+}
+.col-get-in-touch hr {
+    border: 1px solid #5e299a;;
+    margin-top: 0;
+}
+.redes-sociais a {
+    text-decoration: none;
+    font-size: 35px;
+    color: #fff;
+    margin-right: 10px;
+}
+.redes-sociais a:hover {
+    color: #5e299a;
+}
