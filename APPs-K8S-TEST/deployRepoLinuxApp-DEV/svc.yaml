@@ -5,7 +5,7 @@ metadata:
   namespace: repo-linux
 spec:
   ports:
-  - nodePort: 32222
+  - nodePort: 32555
     port: 80
     protocol: TCP
     targetPort: 80

@@ -5,7 +5,7 @@ metadata:
   namespace: curriculo-generator
 spec:
   ports:
-  - nodePort: 32444
+  - nodePort: 32777
     port: 80
     protocol: TCP
     targetPort: 80

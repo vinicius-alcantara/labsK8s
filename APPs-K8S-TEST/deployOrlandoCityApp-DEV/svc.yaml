@@ -5,7 +5,7 @@ metadata:
   namespace: orlando-city
 spec:
   ports:
-  - nodePort: 32333
+  - nodePort: 32666
     port: 80
     protocol: TCP
     targetPort: 80
