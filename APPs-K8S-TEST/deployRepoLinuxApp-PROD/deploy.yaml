@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: repo-linux
+  name: production-repo-linux
   labels:
-    app: repo-linux
+    app: production-repo-linux
   namespace: repo-linux
 spec:
   progressDeadlineSeconds: 600
@@ -16,14 +16,14 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: repo-linux
+      app: production-repo-linux
   template:
     metadata:
       labels:
-        app: repo-linux
+        app: production-repo-linux
     spec:
       containers:
-      - name: repo-linux
+      - name: production-repo-linux
         image: viniciusalcantara2018/repo-linux-images:1.0
         imagePullPolicy: Always
         terminationMessagePath: /dev/termination-log

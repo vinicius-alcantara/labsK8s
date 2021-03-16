@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: curriculo-generator
+  name: develop-curriculo-generator
   labels:
-    app: curriculo-generator
+    app: develop-curriculo-generator
   namespace: curriculo-generator
 spec:
   progressDeadlineSeconds: 600
@@ -16,14 +16,14 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: curriculo-generator
+      app: develop-curriculo-generator
   template:
     metadata:
       labels:
-        app: curriculo-generator
+        app: develop-curriculo-generator
     spec:
       containers:
-      - name: curriculo-generator
+      - name: develop-curriculo-generator
         image: viniciusalcantara2018/curriculo:1.0
         imagePullPolicy: Always
         terminationMessagePath: /dev/termination-log

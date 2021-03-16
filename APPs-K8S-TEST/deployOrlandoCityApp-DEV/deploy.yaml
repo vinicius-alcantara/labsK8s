@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orlando-city
+  name: develop-orlando-city
   labels:
-    app: orlando-city
+    app: develop-orlando-city
   namespace: orlando-city
 spec:
   progressDeadlineSeconds: 600
@@ -16,14 +16,14 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: orlando-city
+      app: develop-orlando-city
   template:
     metadata:
       labels:
-        app: orlando-city
+        app: develop-orlando-city
     spec:
       containers:
-      - name: orlando-city
+      - name: develop-orlando-city
         image: viniciusalcantara2018/orlando-city:1.0
         imagePullPolicy: Always
         terminationMessagePath: /dev/termination-log
