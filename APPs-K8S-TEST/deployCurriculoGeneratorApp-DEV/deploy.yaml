@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: develop-curriculo-generator
-        image: viniciusalcantara2018/curriculo:1.0
+        image: viniciusalcantara2018/curriculo-dev:1.0
         imagePullPolicy: Always
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-nginx
+  name: svc-develop-repo-linux
   namespace: repo-linux
 spec:
   ports:
@@ -11,4 +11,4 @@ spec:
     targetPort: 80
   type: NodePort
   selector:
-    app: repo-linux
+    app: develop-repo-linux
