@@ -10,7 +10,7 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 vinicius.local.				IN	NS	dns-server.vinicius.local.
-vinicius.local				IN	A	10.1.203.24
+vinicius.local.				IN	A	10.1.203.24
 dns-server				IN	A	10.1.203.24
 repo-linux				IN	A	10.1.203.24
 orlandocity				IN	A	10.1.203.24
