@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: develop-repo-linux
+  name: desenvolvimento-repo-linux
   labels:
-    app: develop-repo-linux
+    app: desenvolvimento-repo-linux
   namespace: repo-linux
 spec:
   progressDeadlineSeconds: 600
-  replicas: 3
+  replicas: 1
   revisionHistoryLimit: 3
   strategy:
     rollingUpdate:
@@ -16,14 +16,14 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: develop-repo-linux
+      app: desenvolvimento-repo-linux
   template:
     metadata:
       labels:
-        app: develop-repo-linux
+        app: desenvolvimento-repo-linux
     spec:
       containers:
-      - name: develop-repo-linux
+      - name: repo-linux
         image: viniciusalcantara2018/repo-linux-images:1.0
         imagePullPolicy: Always
         terminationMessagePath: /dev/termination-log

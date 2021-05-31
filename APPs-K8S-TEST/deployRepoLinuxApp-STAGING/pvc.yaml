@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-repo-linux
+  namespace: repo-linux
+spec:
+  resources:
+    limits:
+      storage: "20Gi"
+    requests:
+      storage: "20Gi"
+  accessModes:
+  - ReadWriteMany

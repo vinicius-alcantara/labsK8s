@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-develop-curriculo-generator
+  name: svc-desenvolvimento-curriculo-generator
   namespace: curriculo-generator
 spec:
   ports:
-  - nodePort: 32777
+  - nodePort: 32767
     port: 80
     protocol: TCP
     targetPort: 80
   type: NodePort
   selector:
-    app: develop-curriculo-generator
+    app: desenvolvimento-curriculo-generator

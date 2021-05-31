@@ -10,14 +10,18 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 vinicius.local.				IN	NS	dns-server.vinicius.local.
-vinicius.local.				IN	A	10.1.203.24
-dns-server				IN	A	10.1.203.24
-repo-linux				IN	A	10.1.203.24
-orlandocity				IN	A	10.1.203.24
-curriculo-generator			IN	A	10.1.203.24
-repo-linux-homologacao			IN	A	10.1.203.24
-orlandocity-homologacao			IN	A	10.1.203.24
-curriculo-generator-homologacao		IN	A	10.1.203.24
+vinicius.local.				IN	A	10.1.203.200
+dns-server				IN	A	10.1.203.200
+repo-linux				IN	A	10.1.203.200
+orlandocity				IN	A	10.1.203.200
+curriculo-generator			IN	A	10.1.203.200
+repo-linux-homologacao			IN	A	10.1.203.200
+orlandocity-homologacao			IN	A	10.1.203.200
+curriculo-generator-homologacao		IN	A	10.1.203.200
+repo-linux-desenvolvimento              IN      A       10.1.203.200
+orlandocity-desenvolvimento             IN      A       10.1.203.200
+curriculo-generator-desenvolvimento     IN      A       10.1.203.200
+rundeck					IN	A	10.1.203.200
 www					IN	CNAME	vinicius.local.	
 
 ;@	IN	A	127.0.0.1
